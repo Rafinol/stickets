@@ -14,6 +14,6 @@ class StartCommand extends \Longman\TelegramBot\Commands\SystemCommands\StartCom
         $chat_id = $message->getChat()->getId();
         $user_id = $message->getFrom()->getId();
 
-        return parent::execute();
+        return Request::sendMessage($message);
     }
 }
